@@ -1,5 +1,5 @@
 <?php
-require_once('connect.php');
+require_once('../db/connect.php');
 
 
 if(isset($_POST['buttonc'])){
@@ -20,7 +20,9 @@ if(isset($_POST['buttonc'])){
 
              $sql="insert into users (nome,email,senha) values ('$Nome', '$Email','$Senha')";
              $result = mysqli_query($con,$sql);
+
              echo '<script>alert("TA TRANKS, ta salvo")</script>';
+             
         }
     }
 }
