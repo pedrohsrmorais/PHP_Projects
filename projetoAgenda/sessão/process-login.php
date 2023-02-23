@@ -2,6 +2,7 @@
 require_once('../db/connect.php');
 
 session_start();
+$User = $_SESSION['email'];
 
 if(isset($_POST['buttonl'])){
     $Email = mysqli_real_escape_string($con,$_POST["email"]);

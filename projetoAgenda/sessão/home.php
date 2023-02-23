@@ -21,7 +21,7 @@ $result = mysqli_query($con,$sql);
 <header class="head">
        <h1> Agenda </h1>
         <nav class="navbar">
-            <a href="#">Criar contato</a>
+            <a href="../sessão/createcontact.php">Criar contato</a>
             <a href="#" rel="import">Excluir contato</a>
             <a href="../htmls/mainpage.html">Sair</a>
         </nav>
