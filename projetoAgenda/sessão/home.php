@@ -23,7 +23,6 @@ $result = mysqli_query($con,$sql);
        <h1> Agenda </h1>
         <nav class="navbar">
             <a href="../sessão/createcontact.php">Criar contato</a>
-            <a href="../sessão/delete.php" rel="import">Excluir contato</a>
             <a href="../htmls/mainpage.html">Sair</a>
         </nav>
     </header>
@@ -40,7 +39,7 @@ $result = mysqli_query($con,$sql);
                 <td> <?php echo $row['nome'] ?></td>
                 <td> <?php echo $row['contato'] ?></td>
                 <td> <?php echo $row['email']?></td>
-                <td> <a href="../sessão/edit.php?nome=<?php echo $row['nome'] ?>&contato=<?php echo $row['contato'] ?>&email=<?php echo $row['email'] ?>">editar</a> </td>
+                <td> <a href="../sessão/edit.php?nome=<?php echo $row['nome'] ?>&contato=<?php echo $row['contato'] ?>&email=<?php echo $row['email'] ?>&id=<?php echo $row['id'] ?>">editar</a> </td>
                 <td> <a href="../sessão/delete.php?nome=<?php echo $row['nome'] ?>&contato=<?php echo $row['contato'] ?>&email=<?php echo $row['email'] ?>">excluir</a> </td>
                 
                 

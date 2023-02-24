@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../db/connect.php');
+$id = $_GET['id'];
 $nome = $_GET['nome'];
 $ctt = $_GET['contato'];
 $email = $_GET['email'];
@@ -17,9 +18,10 @@ $email = $_GET['email'];
 </head>
 <body>
 <div class="login-box">
-<form action="process_contact.php" method="post">
+<form action="process_edit.php?id=<?php echo $id ?>" method="post">
     <h1>Cadastro</h1>
         <h2>
+        
             <div class="user-box">
             <input type="text" name="nome" value="<?php echo $nome ?>">
             <label> Nome </label>
