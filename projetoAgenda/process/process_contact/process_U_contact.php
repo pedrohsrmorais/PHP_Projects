@@ -1,7 +1,9 @@
 <?php
-require_once('../db/connect.php');
+require_once('../../db/connect.php');
 session_start();
 $User = $_SESSION['email'];
+$id = $_GET['id'];
+
 
 if(isset($_POST['buttonc'])){
     $Nome = mysqli_real_escape_string($con,$_POST["nome"]);
@@ -9,12 +11,17 @@ if(isset($_POST['buttonc'])){
     $Email = mysqli_real_escape_string($con,$_POST["email"]);
 
 
-    $sql="insert into contatos (usuario,nome,email,contato) values ('$User','$Nome', '$Email','$Telefone')";
+    $sql="UPDATE contatos SET 
+    nome = '$Nome',
+    email = '$Email',
+    contato = '$Telefone' 
+    WHERE id = '$id' ";
+
+
     $result = mysqli_query($con,$sql);
 
-    header("Location: home.php");
+    header("Location: ../../pages/pages_user/page_home.php");
 
 }
-
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once('../db/connect.php');
+require_once('../../db/connect.php');
 
 session_start();
 $User = $_SESSION['email'];
@@ -18,7 +18,7 @@ if(isset($_POST['buttonl'])){
         $_SESSION['nome'] = $row['nome'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['senha'] = $row['senha'];
-        header("Location: home.php");
+        header("Location: ../../pages/pages_user/page_home.php");
 
     }else{
         echo 'usuario e senha NÃO encontrados';

@@ -1,24 +1,17 @@
 <?php
 session_start();
-require_once('../db/connect.php');
+require_once('../../db/connect.php');
+include('../../htmls/headForm.html');
 $id = $_GET['id'];
 $nome = $_GET['nome'];
 $ctt = $_GET['contato'];
 $email = $_GET['email'];
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilo02.css">
-    <title>Cadastro</title>
-</head>
+
 <body>
 <div class="login-box">
-<form action="process_edit.php?id=<?php echo $id ?>" method="post">
+<form action="../../process/process_contact/process_U_contact.php?id=<?php echo $id ?>" method="post">
     <h1>Cadastro</h1>
         <h2>
         
@@ -47,7 +40,7 @@ $email = $_GET['email'];
         <input type="submit" class="submit" name="buttonc">
         </h2>
         <br>
-        <a href="../sessão/home.php">Cancelar</a>
+        <a href="../pages_user/page_home.php">Cancelar</a>
 </div>
 </form>
         

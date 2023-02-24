@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilo02.css">
-    <title>Cadastro</title>
+<?php include('../../htmls/head.html')
+?>
+
 </head>
 <body>
 <div class="login-box">
-<form action="process.php" method="post">
+<form action="../../process/process_user/process_C_account.php" method="post">
     <h1>Cadastro</h1>
         <h2>
             <div class="user-box">
@@ -45,7 +40,7 @@
         <input type="submit" class="submit" name="buttonc">
         </h2>
         <br>
-        <a href="../htmls/mainpage.html">Voltar para Homepage</a>
+        <a href="../../mainpage.php">Voltar para Homepage</a>
 </div>
 </form>
         
